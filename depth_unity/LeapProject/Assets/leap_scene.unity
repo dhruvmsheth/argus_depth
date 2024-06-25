@@ -1286,6 +1286,7 @@ GameObject:
   - component: {fileID: 309871102}
   - component: {fileID: 309871104}
   - component: {fileID: 309871103}
+  - component: {fileID: 309871105}
   m_Layer: 0
   m_Name: leap_env
   m_TagString: Untagged
@@ -1331,9 +1332,9 @@ MonoBehaviour:
     VectorObservationSize: 0
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 50
+      m_NumContinuousActions: 60
       BranchSizes: 
-    VectorActionSize: 32000000
+    VectorActionSize: 3c000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 1
     hasUpgradedBrainParametersWithActionSpec: 1
@@ -1390,6 +1391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 1141100648}
+  uberReplacementShader: {fileID: 0}
   m_SensorName: cam_sensor2
   m_Width: 672
   m_Height: 376
@@ -1411,7 +1413,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Camera: {fileID: 20396045}
+  uberReplacementShader: {fileID: 0}
   m_SensorName: cam_sensor1
+  m_Width: 672
+  m_Height: 376
+  m_Grayscale: 0
+  m_ObservationType: 0
+  m_RuntimeCameraEnable: 1
+  m_ObservationStacks: 1
+  m_Compression: 1
+--- !u!114 &309871105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309871097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 282f342c2ab144bf38be65d4d0c4e07d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Camera: {fileID: 1336351220}
+  uberReplacementShader: {fileID: 0}
+  m_SensorName: cam_depth
   m_Width: 672
   m_Height: 376
   m_Grayscale: 0
@@ -4256,7 +4281,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
